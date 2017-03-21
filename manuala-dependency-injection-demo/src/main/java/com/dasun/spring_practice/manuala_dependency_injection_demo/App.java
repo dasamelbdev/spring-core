@@ -8,6 +8,11 @@ public class App
 {
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
+    	
+    	OrangeJuice orangeJuice = new OrangeJuice();
+    	AppleJuice appleJuice = new AppleJuice();
+    	//manually injecting the dependency.
+        JuiceMakerService juiceMakerService = new JuiceMakerService(appleJuice);
+        juiceMakerService.makeJuice();
     }
 }
