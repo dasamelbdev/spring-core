@@ -1,4 +1,6 @@
+import com.spring.practice.model.PrototypeBean;
 import com.spring.practice.model.Student;
+import com.spring.practice.model.Subject;
 import org.apache.log4j.Logger;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -20,6 +22,10 @@ public class App {
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("META-INF/application-context.xml");
         Student student = applicationContext.getBean("studentId", Student.class);
         log.info(student.toString());
+
+        PrototypeBean prototypeBean1=applicationContext.getBean("prototypeBanId",PrototypeBean.class);
+        PrototypeBean prototypeBean2=applicationContext.getBean("prototypeBanId",PrototypeBean.class);
+        log.info("prototypeBean1==prototypeBean2"+(prototypeBean1==prototypeBean2));
 
         ((ClassPathXmlApplicationContext) applicationContext).close();
 

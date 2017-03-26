@@ -34,8 +34,9 @@
         <property name="house" ref="houseId"/>
         <property name="age" value="31"/>
         <property name="subject" ref="subjectId"/>
-
     </bean>
 
+    <!-- prototype scope-->
+    <bean id="prototypeBanId" class="com.spring.practice.model.PrototypeBean" scope="prototype"/>
 
 </beans>

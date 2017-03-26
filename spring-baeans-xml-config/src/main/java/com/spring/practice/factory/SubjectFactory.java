@@ -18,6 +18,7 @@ public class SubjectFactory {
     public Subject getSuject() {
         Subject subject = new Subject();
         subject.setName(INSTRUTOR_NAME);
+        log.info("at getSuject()");
         return subject;
 
     }
