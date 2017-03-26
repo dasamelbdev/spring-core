@@ -1,5 +1,7 @@
 package com.spring.practice.model;
 
+import java.util.Calendar;
+
 /**
  * Created by dasun on 3/26/17.
  */
@@ -10,15 +12,14 @@ public class Student {
     private int age;
     private String school;
     private House house;
+    private Calendar currentYear;
+    private Subject subject;
 
 
-
-
-
-
-    public Student(String name, String school) {
+    public Student(String name, String school, Calendar currentYear) {
         this.name = name;
         this.school = school;
+        this.setCurrentYear(currentYear);
     }
 
 
@@ -55,8 +56,28 @@ public class Student {
     }
 
 
+    public Calendar getCurrentYear() {
+        return currentYear;
+    }
+
+    public void setCurrentYear(Calendar currentYear) {
+        this.currentYear = currentYear;
+    }
+
+    public Subject getSubject() {
+        return subject;
+    }
+
+    public void setSubject(Subject subject) {
+        this.subject = subject;
+    }
+
+
     @Override
     public String toString() {
-        return this.name+" "+this.age+" "+this.school+" "+this.house.toString();
+        return this.name + " " + this.age + " " + this.school + " " + this.house.toString() + " " + this.currentYear.get(Calendar.YEAR) + " " + this.subject.getName();
+
     }
+
+
 }
