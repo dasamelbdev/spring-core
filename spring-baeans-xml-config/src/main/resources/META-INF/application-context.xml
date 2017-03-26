@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <bean id="houseId" class="com.spring.practice.model.House">
+
+        <constructor-arg value="colombo" type="String" index="0"/>
+        <constructor-arg value="nugegoda" type="String" index="1"/>
+
+        <property name="houseType" value="Two Story"/>
+        <property name="road" value="highlevel"/>
+        <property name="houseNumber" value="255/15"/>
+
+
+    </bean>
+
+
+    <bean id="studentId" class="com.spring.practice.model.Student">
+
+
+        <constructor-arg value="dasun" type="String" index="0"/>
+        <constructor-arg value="Royal college" type="String" index="1"/>
+
+
+        <property name="name" value="dasun samarasiri"/>
+        <property name="house" ref="houseId"/>
+        <property name="age" value="31"/>
+
+
+    </bean>
+
+
+</beans>
