@@ -6,8 +6,9 @@
 
     <!-- factory method usage-->
     <bean id="currentYear" class="java.util.Calendar" factory-method="getInstance"/>
+
     <!-- factory bean usage-->
-    <bean id="subjectFactory"  class="com.spring.practice.factory.SubjectFactory"/>
+    <bean id="subjectFactory" class="com.spring.practice.factory.SubjectFactory"/>
     <bean id="subjectId" factory-bean="subjectFactory" factory-method="getSuject"/>
 
 
@@ -34,6 +35,12 @@
         <property name="house" ref="houseId"/>
         <property name="age" value="31"/>
         <property name="subject" ref="subjectId"/>
+    </bean>
+
+
+    <!-- singleton scope -->
+    <bean id="SingletonScopeBeanId" class="com.spring.practice.model.SingletonScopeBean">
+        <property name="prototypeBean" ref="prototypeBanId"/>
     </bean>
 
     <!-- prototype scope-->

@@ -1,4 +1,5 @@
 import com.spring.practice.model.PrototypeBean;
+import com.spring.practice.model.SingletonScopeBean;
 import com.spring.practice.model.Student;
 import com.spring.practice.model.Subject;
 import org.apache.log4j.Logger;
@@ -19,13 +20,29 @@ public class App {
 
     public static void main(String[] args) {
 
+        //normal bean usage
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("META-INF/application-context.xml");
         Student student = applicationContext.getBean("studentId", Student.class);
         log.info(student.toString());
 
-        PrototypeBean prototypeBean1=applicationContext.getBean("prototypeBanId",PrototypeBean.class);
-        PrototypeBean prototypeBean2=applicationContext.getBean("prototypeBanId",PrototypeBean.class);
-        log.info("prototypeBean1==prototypeBean2"+(prototypeBean1==prototypeBean2));
+
+        //factory bean usage
+        Subject subject1 = applicationContext.getBean("subjectId", Subject.class);
+        Subject subject2 = applicationContext.getBean("subjectId", Subject.class);
+        log.info("subject1==subject2" + (subject1 == subject2));
+
+
+        //prototype scope
+        PrototypeBean prototypeBean1 = applicationContext.getBean("prototypeBanId", PrototypeBean.class);
+        PrototypeBean prototypeBean2 = applicationContext.getBean("prototypeBanId", PrototypeBean.class);
+        log.info("prototypeBean1==prototypeBean2" + (prototypeBean1 == prototypeBean2));
+
+        //usage of applicationcontextaware interface
+        SingletonScopeBean singletonScopeBean = applicationContext.getBean("SingletonScopeBeanId", SingletonScopeBean.class);
+        PrototypeBean prototypeBeanObj1 = singletonScopeBean.getPrototypeBean();
+        PrototypeBean prototypeBeanObj2 = singletonScopeBean.getPrototypeBean();
+        log.info("prototypeBeanObj1==prototypeBeanObj2" + (prototypeBeanObj1 == prototypeBeanObj2));
+
 
         ((ClassPathXmlApplicationContext) applicationContext).close();
 
