@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="simpleCollectionHolderId" class="com.spring.practice.model.SimpleCollectionHolder">
+        <!--injecting the list-->
+        <property name="list">
+            <list>
+                <value>Dasun</value>
+                <value>Nuwan</value>
+                <value>piyumee</value>
+                <value>Tom</value>
+                <value>Mari</value>
+            </list>
+        </property>
+        <!-- injecting the set-->
+        <property name="set">
+            <set>
+                <value>Kandy</value>
+                <value>Kandy</value>
+                <value>London</value>
+                <value>Sydney</value>
+            </set>
+        </property>
+        <!--injecting the map-->
+        <property name="map">
+            <map>
+                <entry key="a" value="first"/>
+                <entry key="b" value="second"/>
+                <entry key="c" value="third"/>
+                <entry key="d" value="fourth"/>
+            </map>
+        </property>
+    </bean>
+</beans>
