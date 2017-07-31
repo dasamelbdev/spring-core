@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/util
+       http://www.springframework.org/schema/util/spring-util-3.0.xsd">
+
+    <!-- creating school beans-->
+
+    <!--<bean id="schoolId1" class="model.School">-->
+        <!--<property name="name" value="Royal"/>-->
+        <!--<property name="type" value="national"/>-->
+    <!--</bean>-->
+
+    <bean id="schoolAutoWireByName" class="model.School">
+        <property name="name" value="ananda"/>
+        <property name="type" value="national"/>
+    </bean>
+
+    <!--<bean id="schoolId3" class="model.School">-->
+        <!--<property name="name" value="nalanda"/>-->
+        <!--<property name="type" value="national"/>-->
+    <!--</bean>-->
+
+    <!--creating address beans-->
+    <!--<bean id="addressId1" class="model.Address">-->
+        <!--<property name="city" value="colombo"/>-->
+        <!--<property name="road" value="highlevel"/>-->
+        <!--<property name="houseNumber" value="100/12"/>-->
+    <!--</bean>-->
+
+    <!--<bean id="addressAutoWireByName" class="model.Address">-->
+        <!--<property name="city" value="colombo"/>-->
+        <!--<property name="road" value="low level"/>-->
+        <!--<property name="houseNumber" value="200/13"/>-->
+    <!--</bean>-->
+
+    <bean id="addressId3" class="model.Address">
+        <property name="city" value="colombo"/>
+        <property name="road" value="gall road"/>
+        <property name="houseNumber" value="300/12"/>
+    </bean>
+
+
+    <!--normal dependency injection -->
+    <!--<bean id="studentId" class="model.Student">-->
+        <!--<property name="name" value="dasun"/>-->
+        <!--<property name="age" value="23"/>-->
+        <!--<property name="school" ref="schoolId1"/>-->
+        <!--<property name="address" ref="addressId1"/>-->
+    <!--</bean>-->
+
+    <!-- auto wire by name-->
+
+    <!--<bean id="studentAutoWireBhNameId" class="model.StudentAutoWireBhName" autowire="byName">-->
+        <!--<property name="name" value="dasun"/>-->
+        <!--<property name="age" value="23"/>-->
+        <!--&lt;!&ndash;<property name="school" ref="schoolId1"/>&ndash;&gt;-->
+        <!--&lt;!&ndash;<property name="address" ref="addressId1"/>&ndash;&gt;-->
+    <!--</bean>-->
+
+    <!--auto wire by type -->
+
+    <!--<bean id="studentAutoWireByTypeId" class="model.StudentAutoWireByType" autowire="byType">-->
+        <!--<property name="name" value="nuwan"/>-->
+        <!--<property name="age" value="33"/>-->
+        <!--&lt;!&ndash;<property name="school" ref="schoolId1"/>&ndash;&gt;-->
+        <!--&lt;!&ndash;<property name="address" ref="addressId1"/>&ndash;&gt;-->
+    <!--</bean>-->
+
+    <!-- auto wire by constructor-->
+
+    <!--<bean id="studentAutoWireByConstrcutorId" class="model.StudentAutoWireByConstrcutor" autowire="constructor">-->
+        <!--<property name="name" value="nuwan"/>-->
+        <!--<property name="age" value="33"/>-->
+        <!--&lt;!&ndash;<property name="school" ref="schoolId1"/>&ndash;&gt;-->
+        <!--&lt;!&ndash;<property name="address" ref="addressId1"/>&ndash;&gt;-->
+    <!--</bean>-->
+
+    <!--auto wire by auto detect -->
+
+    <bean id="studentAutoWireByAutoDetectId" class="model.StudentAutoWireByAutoDetect" autowire="default">
+        <property name="name" value="nuwan"/>
+        <property name="age" value="33"/>
+        <!--<property name="school" ref="schoolId1"/>-->
+        <!--<property name="address" ref="addressId1"/>-->
+    </bean>
+
+</beans>

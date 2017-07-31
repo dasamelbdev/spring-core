@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/spring-xml-autowire.iml" filepath="$PROJECT_DIR$/.idea/modules/spring-xml-autowire.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/spring-xml-autowire_main.iml" filepath="$PROJECT_DIR$/.idea/modules/spring-xml-autowire_main.iml" group="spring-xml-autowire" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/spring-xml-autowire_test.iml" filepath="$PROJECT_DIR$/.idea/modules/spring-xml-autowire_test.iml" group="spring-xml-autowire" />
+    </modules>
+  </component>
+</project>
