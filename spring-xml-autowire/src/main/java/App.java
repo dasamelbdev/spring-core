@@ -13,8 +13,8 @@ public class App {
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("META-INF/application-context.xml");
 
         //normal bean usage
-        Student student = applicationContext.getBean("studentId", Student.class);
-        System.out.println(student.toString());
+//        Student student = applicationContext.getBean("studentId", Student.class);
+//        System.out.println(student.toString());
 
         //auto wire by name
         /**
@@ -40,8 +40,8 @@ public class App {
          *To demonstrate this functionality please comment out all the school bean except one and comment out all address beans except one.
          *
          * */
-         StudentAutoWireByType studentAutoWireByType = applicationContext.getBean("studentAutoWireByTypeId", StudentAutoWireByType.class);
-         System.out.println(studentAutoWireByType.toString());
+//         StudentAutoWireByType studentAutoWireByType = applicationContext.getBean("studentAutoWireByTypeId", StudentAutoWireByType.class);
+//         System.out.println(studentAutoWireByType.toString());
 
 
         //auto wiring by constructor
@@ -56,8 +56,8 @@ public class App {
          *
          *
          * */
-        StudentAutoWireByConstrcutor studentAutoWireByConstrcutor = applicationContext.getBean("studentAutoWireByConstrcutorId", StudentAutoWireByConstrcutor.class);
-        System.out.println(studentAutoWireByConstrcutor.toString());
+//        StudentAutoWireByConstrcutor studentAutoWireByConstrcutor = applicationContext.getBean("studentAutoWireByConstrcutorId", StudentAutoWireByConstrcutor.class);
+//        System.out.println(studentAutoWireByConstrcutor.toString());
 
 
         //auto wiring by default

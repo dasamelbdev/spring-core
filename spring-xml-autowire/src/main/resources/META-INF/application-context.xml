@@ -31,17 +31,17 @@
         <!--<property name="houseNumber" value="100/12"/>-->
     <!--</bean>-->
 
-    <!--<bean id="addressAutoWireByName" class="model.Address">-->
-        <!--<property name="city" value="colombo"/>-->
-        <!--<property name="road" value="low level"/>-->
-        <!--<property name="houseNumber" value="200/13"/>-->
-    <!--</bean>-->
-
-    <bean id="addressId3" class="model.Address">
+    <bean id="addressAutoWireByName" class="model.Address">
         <property name="city" value="colombo"/>
-        <property name="road" value="gall road"/>
-        <property name="houseNumber" value="300/12"/>
+        <property name="road" value="low level"/>
+        <property name="houseNumber" value="200/13"/>
     </bean>
+
+    <!--<bean id="addressId3" class="model.Address">-->
+        <!--<property name="city" value="colombo"/>-->
+        <!--<property name="road" value="gall road"/>-->
+        <!--<property name="houseNumber" value="300/12"/>-->
+    <!--</bean>-->
 
 
     <!--normal dependency injection -->
@@ -54,12 +54,12 @@
 
     <!-- auto wire by name-->
 
-    <!--<bean id="studentAutoWireBhNameId" class="model.StudentAutoWireBhName" autowire="byName">-->
-        <!--<property name="name" value="dasun"/>-->
-        <!--<property name="age" value="23"/>-->
-        <!--&lt;!&ndash;<property name="school" ref="schoolId1"/>&ndash;&gt;-->
-        <!--&lt;!&ndash;<property name="address" ref="addressId1"/>&ndash;&gt;-->
-    <!--</bean>-->
+    <bean id="studentAutoWireBhNameId" class="model.StudentAutoWireBhName" autowire="byName">
+        <property name="name" value="dasun"/>
+        <property name="age" value="23"/>
+        <!--<property name="school" ref="schoolId1"/>-->
+        <!--<property name="address" ref="addressId1"/>-->
+    </bean>
 
     <!--auto wire by type -->
 
@@ -81,11 +81,11 @@
 
     <!--auto wire by auto detect -->
 
-    <bean id="studentAutoWireByAutoDetectId" class="model.StudentAutoWireByAutoDetect" autowire="default">
-        <property name="name" value="nuwan"/>
-        <property name="age" value="33"/>
-        <!--<property name="school" ref="schoolId1"/>-->
-        <!--<property name="address" ref="addressId1"/>-->
-    </bean>
+    <!--<bean id="studentAutoWireByAutoDetectId" class="model.StudentAutoWireByAutoDetect" autowire="default">-->
+        <!--<property name="name" value="nuwan"/>-->
+        <!--<property name="age" value="33"/>-->
+        <!--&lt;!&ndash;<property name="school" ref="schoolId1"/>&ndash;&gt;-->
+        <!--&lt;!&ndash;<property name="address" ref="addressId1"/>&ndash;&gt;-->
+    <!--</bean>-->
 
 </beans>
