@@ -13,7 +13,6 @@ public class App
     {
         ApplicationContext context = new ClassPathXmlApplicationContext("application-context.xml");
         BeanA beanA = context.getBean("beanA", BeanA.class);
-
-        System.out.println(beanA.getMyProperty());
+        System.out.println(beanA.getBeanB().getMessage());
     }
 }
