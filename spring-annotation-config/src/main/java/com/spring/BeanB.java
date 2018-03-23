@@ -12,8 +12,7 @@ public class BeanB {
         return message;
     }
 
-    @Required
-    @Value("Hello from beanB")
+
     public void setMessage(String message) {
         this.message = message;
     }

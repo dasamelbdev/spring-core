@@ -5,14 +5,11 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
  * Hello world!
- *
  */
-public class App 
-{
-    public static void main( String[] args )
-    {
+public class App {
+    public static void main(String[] args) {
         ApplicationContext context = new ClassPathXmlApplicationContext("application-context.xml");
-        BeanC beanC = context.getBean("beanC", BeanC.class);
-        System.out.println(beanC.getProp());
+        BeanA beanA = context.getBean("beanA", BeanA.class);
+        System.out.println(beanA.getBeanB().getMessage());
     }
 }

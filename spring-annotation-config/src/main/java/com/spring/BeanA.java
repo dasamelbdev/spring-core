@@ -1,15 +1,16 @@
 package com.spring;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import com.spring.*;
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.beans.factory.annotation.Required;
-import org.springframework.beans.factory.annotation.Value;
 
 public class BeanA {
 
-    @Value("Done")
     private String myProperty;
-    @Qualifier
+
+    @Autowired
+    //@Qualifier("second")/**we are giving the value of the qualifier here*/
+    @Qualifier("beanB1")//if the qualifier tag is not included in the bean definition we can give the bean id as qualifier value
     private BeanB beanB;
 
     public String getMyProperty() {
@@ -22,8 +23,6 @@ public class BeanA {
     public BeanB getBeanB() {
         return beanB;
     }
-    @Autowired
-    @Qualifier(value="second")
     public void setBeanB(BeanB beanB) {
         this.beanB = beanB;
     }

@@ -10,7 +10,7 @@
     <bean id="beanA" class="com.spring.BeanA" />
 
     <bean id="beanB1" class="com.spring.BeanB">
-        <property name="message" value="value from beanB1"/>
+        <property name="message" value="value from beanB1 !!!"/>
     </bean>
     <bean id="beanB2" class="com.spring.BeanB" >
         <property name="message" value="value from beanB2"/>
