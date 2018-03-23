@@ -17,5 +17,10 @@
         <qualifier value="second"/>
     </bean>
 
+
+    <bean id="beanC" class="com.spring.BeanC">
+
+    </bean>
+
     <context:annotation-config/>
 </beans>
