@@ -10,7 +10,8 @@ public class BeanA {
 
     @Autowired
     //@Qualifier("second")/**we are giving the value of the qualifier here*/
-    @Qualifier("beanB1")//if the qualifier tag is not included in the bean definition we can give the bean id as qualifier value
+    //@Qualifier("beanB1")//if the qualifier tag is not included in the bean definition we can give the bean id as qualifier value
+    @MyCustomQualifier//adding custom qualifier
     private BeanB beanB;
 
     public String getMyProperty() {

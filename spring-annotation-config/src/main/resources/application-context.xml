@@ -17,6 +17,12 @@
         <qualifier value="second"/>
     </bean>
 
+    <bean id="beanB3" class="com.spring.BeanB" >
+        <property name="message" value="value from beanB3"/>
+        <qualifier type="com.spring.MyCustomQualifier"/>
+    </bean>
+
+
 
     <bean id="beanC" class="com.spring.BeanC">
 
