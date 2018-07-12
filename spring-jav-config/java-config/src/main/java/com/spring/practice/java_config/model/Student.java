@@ -4,20 +4,21 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 public class Student {
 
-	
-	private School school;
+	@Autowired
+	private School getSchool;
 
 //	public School getSchool() {
 //		return school;
 //	}
 //
-	public void setSchool(School school) {
-		this.school = school;
-	}
+//	@Autowired
+//	public void setgetSchool_1(School school) {
+//		this.getSchool = school;
+//	}
 
 	@Override
 	public String toString() {
-		return "Student [school=" + school + ", name=" + name + ", age=" + age + "]";
+		return "Student [school=" + getSchool + ", name=" + name + ", age=" + age + "]";
 	}
 
 	private String name;
