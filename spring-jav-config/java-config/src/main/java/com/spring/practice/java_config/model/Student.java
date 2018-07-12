@@ -1,11 +1,13 @@
 package com.spring.practice.java_config.model;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 
 public class Student {
 
 	@Autowired
-	private School getSchool;
+	@Qualifier("getSchool_1")
+	private School school;
 
 //	public School getSchool() {
 //		return school;
@@ -18,7 +20,7 @@ public class Student {
 
 	@Override
 	public String toString() {
-		return "Student [school=" + getSchool + ", name=" + name + ", age=" + age + "]";
+		return "Student [school=" + school + ", name=" + name + ", age=" + age + "]";
 	}
 
 	private String name;

@@ -10,7 +10,7 @@ import com.spring.practice.java_config.model.Student;
 @Configuration
 public class AppConfig {
 
-	@Bean(autowire=Autowire.BY_NAME)
+	@Bean(autowire=Autowire.BY_TYPE)
 	public Student getStudent() {
 		Student  s =new Student();
 		s.setName("dasun");
