@@ -2,13 +2,16 @@ package com.spring.practice.java_config.model;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Component;
+
 import javax.annotation.Resource;
 
+@Component
 public class Student {
 
-//	@Autowired
-//	@Qualifier("getSchool_1")
-	@Resource(name="getSchool_2")
+	@Autowired
+	@Qualifier("getSchool_1")
+//@Resource(name="getSchool_2")
 	private School school;
 
 //	public School getSchool() {
