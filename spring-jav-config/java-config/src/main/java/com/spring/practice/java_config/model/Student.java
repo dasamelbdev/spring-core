@@ -1,16 +1,19 @@
 package com.spring.practice.java_config.model;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 public class Student {
 
+	@Autowired
 	private School school;
 
-	public School getSchool() {
-		return school;
-	}
-
-	public void setSchool(School school) {
-		this.school = school;
-	}
+//	public School getSchool() {
+//		return school;
+//	}
+//
+//	public void setSchool(School school) {
+//		this.school = school;
+//	}
 
 	@Override
 	public String toString() {
