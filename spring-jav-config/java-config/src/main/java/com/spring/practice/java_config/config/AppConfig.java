@@ -10,7 +10,7 @@ import com.spring.practice.java_config.model.Student;
 @Configuration
 public class AppConfig {
 
-	@Bean(autowire=Autowire.NO)
+	@Bean(autowire=Autowire.BY_TYPE)
 	public Student getStudent() {
 		Student  s =new Student();
 		s.setName("dasun");
@@ -31,7 +31,7 @@ public class AppConfig {
 	@Bean
 	public School getSchool_1() {
 		School s = new School();
-		s.setName("Ananda college");
+		s.setName("Ananda college !!!");
 		s.setAddress("addr");
 		return s;
 	}
