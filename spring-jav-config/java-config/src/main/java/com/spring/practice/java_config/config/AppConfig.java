@@ -35,4 +35,16 @@ public class AppConfig {
 		s.setAddress("addr");
 		return s;
 	}
+	
+	
+	@Bean
+	public School getSchool_2() {
+		School s = new School();
+		s.setName("royal college at colombo !!!");
+		s.setAddress("addr");
+		return s;
+	}
+	
+	
+	
 }
