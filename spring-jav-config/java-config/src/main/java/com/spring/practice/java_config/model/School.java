@@ -2,7 +2,7 @@ package com.spring.practice.java_config.model;
 
 import org.springframework.context.annotation.Scope;
 
-@Scope(value="singleton")
+
 public class School {
 
 	

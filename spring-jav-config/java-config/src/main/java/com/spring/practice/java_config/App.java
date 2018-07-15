@@ -18,5 +18,6 @@ public class App
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
         Student s=context.getBean(Student.class);
         System.out.println(s.toString());
+
     }
 }

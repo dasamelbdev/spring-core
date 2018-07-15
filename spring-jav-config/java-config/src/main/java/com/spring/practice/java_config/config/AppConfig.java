@@ -9,18 +9,17 @@ import com.spring.practice.java_config.model.School;
 import com.spring.practice.java_config.model.Student;
 
 @Configuration
-@ComponentScan("com.spring.practice.java_config.model")
+//@ComponentScan("com.spring.practice.java_config.model")
 public class AppConfig {
 
-//	@Bean(autowire=Autowire.BY_TYPE)
-//	public Student getStudent() {
-//		Student  s =new Student();
-//		s.setName("dasun");
-//		s.setAge(12);
-//		//s.setSchool(getSchool());
-//		return s;
-//	}
-//	
+	@Bean(autowire=Autowire.BY_TYPE)
+	public Student getStudent() {
+		Student  s =new Student();
+		s.setName("dasun");
+		s.setAge(12);
+		return s;
+	}
+	
 	
 	@Bean
 	public School getSchool() {
